@@ -2,7 +2,7 @@
     height: 50px;
 }
 .ust-kisim {
-background-image: url(mm4.avif);
+background-image: url(mm6.avif);
 height: 100vh;
 width: 100%; 
 background-size: cover;
@@ -12,7 +12,7 @@ background-attachment: fixed;
 }
 
 .ust-kisim-sayfalar {
-    background-image: url(mm2.avif);
+    background-image: url(mm6.avif);
     height: 100vh;
     width: 100%; 
     background-size: cover;
@@ -23,6 +23,23 @@ background-attachment: fixed;
     .color-sayfa {
         color:rgb(236, 228, 228);
     }
+    .color-baslik {
+        color:rgb(39, 65, 5);
+    }
+    .card {
+        margin-top: 20px; /* Kartın üst boşluğu */
+        margin-right: 20px; /* Kartın sağ boşluğu */
+      }
+
+      .ornek{
+        width: 900px;
+        margin:auto;
+        }
+
+        .sola-kaydir{
+        float:left;
+        padding:0 10px 10px 0;
+        }
 /*ANASAYFA*/
 
 .carousel-item img {
