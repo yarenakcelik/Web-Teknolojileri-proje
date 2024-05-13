@@ -1,7 +1,7 @@
 .logo {
     height: 50px;
 }
-.ust-kisim {
+/*.ust-kisim {
 background-image: url(mm6.avif);
 height: 100vh;
 width: 100%; 
@@ -9,6 +9,8 @@ background-size: cover;
 background-position: center center;
 background-repeat: no-repeat;
 background-attachment: fixed;
+overflow-y: auto; /* Sayfa boyunca kaydırma çubuğunu görünür yapar 
+z-index: 0; /* Navbar ve diğer içeriklerin üstüne çıkmasını sağlar 
 }
 
 .ust-kisim-sayfalar {
@@ -19,7 +21,22 @@ background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    }
+    position: relative;
+    z-index: 1;
+    }*/
+    .ust-kisim,
+.ust-kisim-sayfalar {
+    background-image: url(mm6.avif);
+    height: 100vh;
+    width: 100%; 
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    overflow-y: auto; /* Sayfa boyunca kaydırma çubuğunu görünür yapar */
+    z-index: 0; /* Navbar ve diğer içeriklerin üstüne çıkmasını sağlar */
+    position: fixed; /* Arka planın sabit kalması için */
+}
     .color-sayfa {
         color:rgb(236, 228, 228);
     }
@@ -31,7 +48,8 @@ background-attachment: fixed;
         margin-right: 20px; /* Kartın sağ boşluğu */
       }
 
-      .ornek{
+      .spor
+      {
         width: 900px;
         margin:auto;
         }
@@ -39,6 +57,10 @@ background-attachment: fixed;
         .sola-kaydir{
         float:left;
         padding:0 10px 10px 0;
+        }
+        .saga-kaydir{
+            float:right;
+            padding:0 10px 10px 0;
         }
 /*ANASAYFA*/
 
