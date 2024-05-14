@@ -68,3 +68,7 @@ z-index: 0; /* Navbar ve diğer içeriklerin üstüne çıkmasını sağlar
 height: 500px;
 width: 20%;
 }
+.carousel-fullscreen {
+    width: 100vw;
+    height: 100vh;
+}
