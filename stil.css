@@ -1,6 +1,22 @@
 .logo {
     height: 50px;
 }
+
+.dropdown-menu {
+    background-color: #343a40; /* Navbar'ın arka plan rengini buraya ekleyin */
+}
+.dropdown-item {
+    color: white; /* Yazı rengini beyaz yap */
+}
+.dropdown-item:hover {
+    background-color: #495057; /* Üzerine gelindiğinde farklı bir arka plan rengi */
+}
+.navbar-brand img {
+    max-width: 100%;
+    height: auto;
+}
+
+
 /*.ust-kisim {
 background-image: url(mm6.avif);
 height: 100vh;
@@ -41,7 +57,7 @@ z-index: 0; /* Navbar ve diğer içeriklerin üstüne çıkmasını sağlar
         color:rgb(236, 228, 228);
     }
     .color-baslik {
-        color:rgb(39, 65, 5);
+        color:rgb(198, 203, 190);
     }
     .card {
         margin-top: 20px; /* Kartın üst boşluğu */
@@ -186,40 +202,22 @@ body {
    /*özgeçmiş*/
 
    .card-oz {
-    width: 80%;
-    margin: 0 auto;
-    background: #fff;
+    background-color: rgba(49, 55, 51, 0.7);
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
     padding: 20px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    border-radius: 8px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
-.card h2 {
-    margin-bottom: 10px;
+.card-oz header, .card-oz section, .card-oz footer {
+    text-align: center;
+    width: 100%;
 }
 
-.card ul {
-    list-style-type: none;
-    padding: 0;
-}
-
-.card ul li {
-    margin-bottom: 5px;
-}
-
-.card article {
-    margin-bottom: 20px;
-}
-
-.card article h3 {
-    margin-bottom: 5px;
-}
-
-.card article p {
-    margin-bottom: 5px;
-}
-
-.card article ul {
-    padding-left: 20px;
-}
-    
+.card-oz ul {
+    list-style: none;
+    padding: 0;}
