@@ -1,32 +1,39 @@
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-
 <?php
-if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $username = $_POST['username'];
-    $password = $_POST['password'];
 
-    // Öğrenci numarası
-    $student_number = "b1812100001";
-    $correct_username = $student_number . "@sakarya.edu.tr";
-    $correct_password = $student_number;
+$servername = "localhost";
+$username = "kullanici_adi";
+$password = "sifre";
+$dbname = "veritabani_adi";
 
-    if (empty($username) || empty($password)) {
-        header("Location: login.html");
-        exit(); // Burada exit fonksiyonunu ekledik
-    }
 
-    if ($username === $correct_username && $password === $correct_password) {
-        // Giriş başarılı ise index sayfasına yönlendir
-        header("Location: index.html");
-        exit(); // Burada exit fonksiyonunu ekledik
-    } else {
-        header("Location: login.html");
-        exit(); // Burada exit fonksiyonunu ekledik
-    }
-} else {
-    header("Location: login.html");
-    exit(); // Burada exit fonksiyonunu ekledik
+$kullanici_adi = $_POST['username'];
+$sifre = $_POST['password'];
+
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+if ($conn->connect_error) {
+    die("Bağlantı hatası: " . $conn->connect_error);
 }
+
+
+$stmt = $conn->prepare("SELECT * FROM kullanici WHERE kullanici_adi=? AND sifre=?");
+$stmt->bind_param("ss", $kullanici_adi, $sifre);
+$stmt->execute();
+$result = $stmt->get_result();
+
+
+if ($result->num_rows > 0) {
+
+    header("Location: basarili.html");
+    exit(); 
+} else {
+  
+    header("Location: girisyap.html");
+    exit(); 
+}
+
+
+$conn->close();
 ?>

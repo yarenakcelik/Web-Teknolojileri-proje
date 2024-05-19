@@ -16,7 +16,14 @@
     height: auto;
 }
 
-
+.jumbotron {
+    text-align: center;
+    background-color: rgba(49, 55, 51, 0.7);
+    color: white;
+}
+.contact-info {
+    margin-top: 20px;
+}
 /*.ust-kisim {
 background-image: url(mm6.avif);
 height: 100vh;
